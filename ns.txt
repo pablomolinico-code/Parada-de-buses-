@@ -1,0 +1,39 @@
+USUARIO:
+{
+ID:
+CONTRASEÑA:
+NOMBRE:
+APELLIDO1:
+APELLIDO2:
+EMPIEZA DND: 
+DESTINO: 
+PREFERENCIAS -> 0-5 -> PRECIO;TIEMPO;COMODIDAD
+}
+
+ESTACIÓN:
+{ 
+ID:
+UBICACIÓN -> EJE X; EJE Y
+NOMBRE UBICACIÓN  == EMPIEZA DND: (EJEMPLO VÉLEZ-MÁLAGA) 
+}
+
+
+RELACIÓN ENTRE ESTACIONES (X --> Y) :
+{
+ID ORIGEN
+ID DESRTINO
+PRECIO,COMODIDAD,TIEMPO(el tiempo realmente lo tenemos que calcular nosotros con lo siguiente)
+HORARIO DE BUSES DE X que van a Y (ej : 1:20, 2:30, 3:40, ...)
+TIEMPO : [que se tarda de ir de X a Y (en minutos, ej : en vez de poner 1h 30 min, pon "90" para mayor comodidad para nosotros)]
+}
+
+
+sabiendo el horario y lo que tardan , podemos saber que si un bus que va de X a Y tarda 1 hora, si la 
+estación en la que estamos no es la última o destino , hay que esperar a la hora del siguiente bus para luego aumentar de nuevo el tiempo del siguiente bus , así todo el rato.
+
+IMPORTANTE:
+LA VARIABLE TIEMPO DEJALA COMO NULL , el tiempo no es solo lo que se tarda del punto A al B , sino además el timepo que estamos esperando al 
+siguiente bus que venga, si no estamos ya en el destino final, por lo que dejanos la variable ahí en el objeto de la relación entre ambos y nosotros lo completaremos,
+a partir de ahí ya con PRECIO,COMODIDAD,TIEMPO hacemos la "media" con los pesos/preferencias que nos ha dado el USUARIO
+
+
