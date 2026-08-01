@@ -2,3 +2,21 @@ from dataclasses import dataclass
 from datetime import datetime
 from decimal import Decimal
 
+@dataclass
+class Route:
+    route_id: int
+    origin_id: int
+    destination_id: int
+    price: Decimal
+    comfort: float
+    departures: list[datetime]
+
+@dataclass
+class SearchState:
+    station_id: int
+    arrival_time: datetime
+    total_price: Decimal
+    comfort_sum: float
+    total_bus_minutes: int
+    score: float
+    path: list[int]
