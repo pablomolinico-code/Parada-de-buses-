@@ -20,3 +20,14 @@ class SearchState:
     total_bus_minutes: int
     score: float
     path: list[int]
+
+
+
+# esto lo uso para dibujar el grafo, no es parte del modelo
+    stations = {
+    1: "Málaga",
+    2: "Sevilla",
+    3: "Córdoba",
+    4: "Madrid",
+    5: "Galicia"
+}
